@@ -1,6 +1,20 @@
-this is master
-this is to try second commit from local vm
-add another line after running git commit
 
-edit from web2
+   // Instance
+    val inst = emptyObject()
+      .put("$type", typeKey.key)
+      .put("foo", "bar")
+
+    val instWithId = inst.deepCopy().put("$id", id.toString)
+
+/**
+   * Retrieve a list of UUIDs for instances that have stored a tuple with the passed prefix
+   * TODO: We need to move away from prefixQuery due to some limitations it has in edge cases
+   *       where a string has a NULL in it.
+   *
+   * @param app The application to store under.
+   * @param prefix A tuple prefix to scan and match against
+   * @return an ArrayNode of ObjectNodes containing enough information to lookup nodes
+   */
+  def prefixQuery(app: Application, prefix: Tuple, limit: Int = DefaultPrefixQueryLimit)(implicit loggingContext: LoggingContext): ArrayNodeo
+
 

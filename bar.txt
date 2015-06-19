@@ -1,0 +1,18 @@
+
+["let", "instanceIdObjs", ["prefixQuery", ["quote", ["parented","file_15653286060"]]],
+  ["map", "instanceIdObj", ["get", "instanceIdObjs"],
+    ["let", "instance", ["getInstance", ["path", ["get", "instanceIdObj"], "/$id"]],
+      ["let", "typeKey", ["path", ["get", "instance"], "/$type"],
+        ["map","viewIdObj", ["prefixQuery", ["quasi", ["view","typeKeyKey",["unquote",["get","typeKey"]],"editor"]]],
+          ["let", "view", ["getInstance", ["path", ["get", "viewIdObj"], "/$id"]],
+            ["eval",
+              ["quasi", ["safely", ["unlet", {"instance":["get","instance"]}, ["unquote", ["path", ["get", "view"] ,"/lispon"]]]]]]]]]]]]
+
+["map", "tuple", ["quote", $BatchPrefixQueryJsonNodeAsString],
+          ["let", "instanceIdObjs",
+            ["prefixQuery", ["get", "tuple"]],
+              ["map", "instanceIdObj", ["get", "instanceIdObjs"],
+              ["getInstance", ["path", ["get", "instanceIdObj"], "/${'$'}id"]]
+            ]
+          ]
+        ]
